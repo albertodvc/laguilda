@@ -1,0 +1,21 @@
+{
+  "name": "laguilda",
+  "version": "0.1.0-alpha",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertodvc/laguilda.git"
+  },
+  "author": "Alberto del Valle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertodvc/laguilda/issues"
+  },
+  "homepage": "https://github.com/albertodvc/laguilda#readme",
+  "dependencies": {
+    "nuxt": "^1.4.0"
+  },
+  "scripts": {
+    "dev": "nuxt"
+  }
+}
