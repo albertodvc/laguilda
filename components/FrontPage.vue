@@ -1,18 +1,25 @@
 <template>
-	<div class="fronti">
+	<header class="front-video">
 		<youtube
+			class="front"
+			width="100%"
+			height="100%"
 			:video-id="videoID"
 			:player-vars="playerVars"/>
-	</div>
+	</header>
 </template>
 
 <style lang="scss" scoped>
+
+	.front-video {
+		height: 700px;
+	}
 
 </style>
 
 <script>
 
-import data from '../db/off-limits'
+import data from '~/db/off-limits'
 
 export default {
 	data: function () {

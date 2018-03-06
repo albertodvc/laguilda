@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/albertodvc/laguilda#readme",
   "dependencies": {
+    "compass-mixins": "^0.12.10",
     "node-sass": "^4.7.2",
     "nuxt": "^1.4.0",
     "sass-loader": "^6.0.6",

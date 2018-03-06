@@ -14,6 +14,10 @@
 
 <style lang="scss" scoped>
 
+	.act {
+		display: grid;
+	}
+
 </style>
 
 <script>

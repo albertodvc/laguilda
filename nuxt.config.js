@@ -54,7 +54,10 @@ function changeLoaderOptions(loaders) {
 		for (const loader of loaders) {
 			if (loader.loader === 'sass-loader') {
 				Object.assign(loader.options, {
-					includePaths: [path.join(process.cwd(), "styles")]
+					includePaths: [
+						path.join(process.cwd(), 'node_modules', 'compass-mixins', 'lib'),
+						path.join(process.cwd(), "styles")
+					]
 				})
 			}
 		}
