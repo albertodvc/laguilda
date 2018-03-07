@@ -10,7 +10,7 @@
 			<rect x="0" y="0" width="100%" height="100%"/>
 		</svg>
 		<div class="video-container">
-			<video id="video" autoplay="autoplay" muted="muted" preload="auto" loop="loop">
+			<video id="video" autoplay muted preload loop playsinline>
 				<source src="./bg.mp4" type="video/mp4">
 			</video>
 		</div>
