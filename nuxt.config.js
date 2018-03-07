@@ -24,7 +24,7 @@ module.exports = {
   ** Build configuration
   */
   generate: {
-	dir: 'docs'
+		dir: 'docs'
   },
 //   router: {
 // 	base: '/off-limits/'
