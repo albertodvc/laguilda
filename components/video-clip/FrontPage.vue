@@ -1,5 +1,5 @@
 <template>
-	<header id="container" class="front-video">
+	<header id="container" class="front-video" v-fit-to-viewport>
 		<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
 			<defs>
 				<mask id="mask" x="0" y="0" width="100%" height="100%" >
@@ -66,3 +66,33 @@
 	}
 
 </style>
+
+<script>
+
+	import data from '~/db/off-limits'
+	import ViewportHeight from '~/helpers/viewportHeight'
+
+	export default {
+		props: ['act'],
+		data: function () {
+			return {
+				playerVars: {
+					modestbranding: 1,
+					showinfo: 0,
+				},
+				videos: data.acts
+			}
+		},
+		directives: {
+			fitToViewport: {
+				inserted: function (el) {
+					el.style.height = ViewportHeight();
+					window.addEventListener('resize', function() {
+						el.style.height = ViewportHeight();
+					})
+				}
+			}
+		}
+	}
+	
+</script>
