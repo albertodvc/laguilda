@@ -26,9 +26,9 @@ module.exports = {
   generate: {
 		dir: 'docs'
   },
-//   router: {
-// 	base: '/off-limits/'
-//   },
+  router: {
+		base: '/laguilda/'
+  },
   build: {
 	/*
 	** Run ESLint on save
