@@ -34,17 +34,16 @@ module.exports = {
 	** Run ESLint on save
 	*/
 		extend (config, { isDev, isClient }) {
-			if (isDev && isClient) {
-				const vueLoader = config.module.rules.find(
-					({loader}) => loader === 'vue-loader')
-				const { options: {loaders} } = vueLoader || { options: {} }
-				if (loaders) {
-					for (const loader of Object.values(loaders)) {
-						changeLoaderOptions(Array.isArray(loader) ? loader : [loader])
-					}
+			const vueLoader = config.module.rules.find(
+				({loader}) => loader === 'vue-loader')
+			const { options: {loaders} } = vueLoader || { options: {} }
+			if (loaders) {
+				for (const loader of Object.values(loaders)) {
+					changeLoaderOptions(Array.isArray(loader) ? loader : [loader])
 				}
-				config.module.rules.forEach(rule => changeLoaderOptions(rule.use))
 			}
+			config.module.rules.forEach(rule => changeLoaderOptions(rule.use))
+			console.log('my config', config.module.rules[4].use[3].options)
   	}
 	}
 }
