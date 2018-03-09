@@ -2,17 +2,9 @@
     <div>
         <front-page/>
         <presentation/>
-        <!-- <show/> -->
+        <show/>
     </div>
 </template>
-
-<style lang="scss">
-    // @import 'compass/reset';
-    body {
-        margin: 0;
-    }
-</style>
-
 
 <script>
 
@@ -21,15 +13,15 @@
 
     Vue.use(VueYoutube)
 
-    import FrontPage from '~/components/video-clip/FrontPage.vue'
-    import Presentation from '~/components/presentation/Presentation.vue'
-    import Show from '~/components/show/Show.vue'
+    import FrontPage from '~/components/FrontPage/FrontPage.vue'
+    import Presentation from '~/components/Presentation/Presentation.vue'
+    import Show from '~/components/Show/Show.vue'
 
     export default {
-    components: {
-        FrontPage,
-        Presentation,
-        Show
-    }
+        components: {
+            FrontPage,
+            Presentation,
+            Show
+        }
     }
 </script>

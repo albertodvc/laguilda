@@ -9,6 +9,7 @@
 				:video-id="act.videoId"
 				:player-vars="playerVars"/>
 		</div>
+		peste del culo
 	</div>
 </template>
 
@@ -21,6 +22,10 @@
 </style>
 
 <script>
+	import Vue from 'vue'
+    import VueYoutube from 'vue-youtube'
+
+    Vue.use(VueYoutube)
 
 	import data from '~/db/off-limits'
 
@@ -36,5 +41,5 @@
 			}
 		}
 	}
-	
+
 </script>
