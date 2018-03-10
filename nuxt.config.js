@@ -24,7 +24,7 @@ module.exports = {
   ** Build configuration
   */
   generate: {
-		dir: 'docs'
+		dir: 'dist'
   },
   router: {
 		base: '/laguilda/'
