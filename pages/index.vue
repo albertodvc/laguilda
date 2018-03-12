@@ -2,7 +2,6 @@
     <div>
         <front-page/>
         <presentation/>
-        <show/>
     </div>
 </template>
 

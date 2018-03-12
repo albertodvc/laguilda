@@ -27,6 +27,14 @@ export default {
 				{
 					link: '/elespectaculo',
 					label: 'El espectaculo'
+				},
+				{
+					link: '/lacompañia',
+					label: 'La compañia'
+				},
+				{
+					link: '/fichatecnica',
+					label: 'Ficha técnica'
 				}
 			]
 		}
