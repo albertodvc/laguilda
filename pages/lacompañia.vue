@@ -1,16 +1,19 @@
 <template>
-	<div>
-		La Compañia
-	</div>
+	<section>
+		<header>
+			<h2>La compañia</h2>
+		</header>
+		<crew/>
+	</section>
 </template>
 
 <script>
 
-	// import Show from '~/components/Show/Show.vue'
+	import Crew from '~/components/Crew/Crew.vue'
 
-	// export default {
-	// 	components: {
-	// 		Show
-	// 	}
-	// }
+	export default {
+		components: {
+			Crew
+		}
+	}
 </script>

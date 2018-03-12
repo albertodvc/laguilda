@@ -2,6 +2,7 @@
 	<div class="act">
 		<div class="info">
 			<h2 class="title">{{ act.title }}</h2>
+			<p class="subtitle">{{ act.subtitle }}</p>
 			<div class="description">{{ act.shortDesc }}</div>
 		</div>
 		<div class="video">
@@ -9,7 +10,6 @@
 				:video-id="act.videoId"
 				:player-vars="playerVars"/>
 		</div>
-		peste del culo
 	</div>
 </template>
 
@@ -27,8 +27,6 @@
 
     Vue.use(VueYoutube)
 
-	import data from '~/db/off-limits'
-
 	export default {
 		props: ['act'],
 		data: function () {
@@ -36,8 +34,7 @@
 				playerVars: {
 					modestbranding: 1,
 					showinfo: 0,
-				},
-				videos: data.acts
+				}
 			}
 		}
 	}

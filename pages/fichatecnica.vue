@@ -1,6 +1,8 @@
 <template>
 	<div>
-		Ficha Tecnica
+		<header>
+			<h2>Rider Técnico</h2>
+		</header>
 	</div>
 </template>
 

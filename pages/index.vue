@@ -14,13 +14,11 @@
 
     import FrontPage from '~/components/FrontPage/FrontPage.vue'
     import Presentation from '~/components/Presentation/Presentation.vue'
-    import Show from '~/components/Show/Show.vue'
 
     export default {
         components: {
             FrontPage,
-            Presentation,
-            Show
+            Presentation
         }
     }
 </script>
