@@ -5,9 +5,12 @@
 </template>
 
 <style lang="scss" scoped>
+
+	$presentation--fluid-margin: 5%;
+
 	.presentation {
 		background: white;
-		padding: 50px;
+		padding: 50px $presentation--fluid-margin;
 
 		p {
 			font-size: 20px;

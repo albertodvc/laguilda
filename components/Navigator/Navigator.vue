@@ -10,7 +10,17 @@
 
 <style lang="scss" scoped>
 	.navigator {
-		background: green;
+		background: black;
+		color: white;
+
+		ul {
+			list-style: none;
+		}
+
+		a,
+		a:visited {
+			color: white;
+		}
 	}
 </style>
 

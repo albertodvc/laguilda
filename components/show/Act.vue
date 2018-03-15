@@ -5,19 +5,46 @@
 			<p class="subtitle">{{ act.subtitle }}</p>
 			<div class="description">{{ act.shortDesc }}</div>
 		</div>
-		<div class="video">
-			<youtube
-				:video-id="act.videoId"
-				:player-vars="playerVars"/>
+		<div class="video-container">
+			<button class="play">play</button>
+			<div class="video">
+				<youtube
+					:video-id="act.videoId"
+					:player-vars="playerVars"
+					width="100%"
+					height="100%"/>
+			</div>
 		</div>
 	</div>
 </template>
 
 <style lang="scss" scoped>
 
-	.act {
-		display: grid;
+	@import 'helpers';
+
+	$act__description--font-size: 14px;
+	$act__info--base-padding: 10px;
+	$act__info--fluid-margin: 5%;
+
+	.info {
+		padding: $act__info--base-padding $act__info--fluid-margin;
 	}
+
+	.description {
+		font-weight: 300;
+		font-size: $act__description--font-size;
+	}
+
+	.video-container {
+		position: relative;
+		@include aspect-ratio(16, 9);
+
+		.video {
+			@extend %cover-parent;
+		}
+	}
+
+
 
 </style>
 
