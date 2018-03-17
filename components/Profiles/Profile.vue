@@ -1,15 +1,11 @@
 <template>
 	<div class="profile">
-		<h2 class="name">{{ profile.name }}</h2>
+		<h3 class="name">{{ profile.name }}</h3>
 		<p class="bio">{{ profile.bio }}</p>
 	</div>
 </template>
 
 <style lang="scss" scoped>
-
-	.profile {
-		background: pink;
-	}
 
 </style>
 
