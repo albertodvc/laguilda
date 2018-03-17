@@ -11,8 +11,7 @@
 
 	body {
 		margin: 0;
-		font-family: $body-font;
-		font-size: 16px;
+		@extend %body-text;
 	}
 
 	h2,
@@ -20,12 +19,11 @@
 	h4,
 	h5,
 	h6 {
-		font-family: $heading-font;
+		@extend %heading;
 	}
 
 	h2 {
-		font-size: $big-heading;
-		margin: 1em 0;
+		@extend %large-heading;
 	}
 
 	* {

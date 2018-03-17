@@ -4,11 +4,11 @@
 			<h3 v-once>{{ section.name }}</h3>
 			<p class="content" v-if="section.content" v-once>{{ section.content }}</p>
 			<ul class="contents" v-if="section.contents" v-once>
-				<li class="item" v-for="item in section.contents">
+				<li class="item" v-for="(item, index) in section.contents" :key="index" v-once>
 					<span :class="key" v-if="!item.contents" v-for="(value, key) in item" :key="key">{{ value }}</span>
-					<h4 v-if="item.contents && item.name"> {{ item.name }}></h4>
-					<ul v-if="item.contents">
-						<li class="item" v-for="item in item.contents">
+					<h4 v-if="item.contents && item.name" v-once> {{ item.name }}</h4>
+					<ul v-if="item.contents" v-once>
+						<li class="item" v-for="(item, index) in item.contents" :key="index" v-once>
 							<span :class="key" v-if="!item.contents" v-for="(value, key) in item" :key="key">{{ value }}</span>
 						</li>
 					</ul>
@@ -19,6 +19,15 @@
 </template>
 
 <style lang="scss" scoped>
+
+	@import "variables";
+
+	.rider {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
 	.item {
 
 		.quantity {

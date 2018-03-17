@@ -1,8 +1,10 @@
 <template>
 	<div class="act">
 		<div class="info">
-			<h2 class="title">{{ act.title }}</h2>
-			<p class="subtitle">{{ act.subtitle }}</p>
+			<header>
+				<h2 class="title">{{ act.title }}</h2>
+				<p class="subtitle">{{ act.subtitle }}</p>
+			</header>
 			<div class="description">{{ act.shortDesc }}</div>
 		</div>
 		<div class="video-container">
@@ -20,20 +22,25 @@
 
 <style lang="scss" scoped>
 
+	@import 'variables';
 	@import 'helpers';
 
 	$act__description--font-size: 14px;
-	$act__info--base-padding: 10px;
-	$act__info--fluid-margin: 5%;
+	$act__info--base-padding: $global-spacing;
+	$act__info--fluid-margin: $fluid-margin;
+
+	.subtitle {
+		@extend %subheading;
+	}
 
 	.info {
 		padding: $act__info--base-padding $act__info--fluid-margin;
 	}
 
-	.description {
-		font-weight: 300;
-		font-size: $act__description--font-size;
-	}
+	// .description {
+	// 	font-weight: 300;
+	// 	font-size: $act__description--font-size;
+	// }
 
 	.video-container {
 		position: relative;

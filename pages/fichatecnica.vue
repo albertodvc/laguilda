@@ -1,10 +1,8 @@
 <template>
-	<div>
-		<header>
-			<h2>Rider Técnico</h2>
-			<rider/>
-		</header>
-	</div>
+	<section>
+		<h2>Rider Técnico</h2>
+		<rider/>
+	</section>
 </template>
 
 <script>

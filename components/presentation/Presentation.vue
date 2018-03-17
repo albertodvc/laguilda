@@ -6,14 +6,18 @@
 
 <style lang="scss" scoped>
 
-	$presentation--fluid-margin: 5%;
+	@import "variables";
+
+	$presentation--fluid-margin: $fluid-margin;
+	$presentation--top-padding: 50px;
+	$presentation--font-size: 20px;
 
 	.presentation {
 		background: white;
-		padding: 50px $presentation--fluid-margin;
+		padding: $presentation--top-padding $presentation--fluid-margin;
 
 		p {
-			font-size: 20px;
+			font-size: $presentation--font-size;
 		}
 	}
 
