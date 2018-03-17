@@ -3,7 +3,7 @@
 		<header>
 			<h2>La compañia</h2>
 		</header>
-		<crew/>
+		<profiles/>
 	</section>
 </template>
 
