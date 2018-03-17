@@ -39,7 +39,7 @@ export default {
 					label: 'El espectaculo'
 				},
 				{
-					link: '/lacompañia',
+					link: '/lacompania',
 					label: 'La compañia'
 				},
 				{

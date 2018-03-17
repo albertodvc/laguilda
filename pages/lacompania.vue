@@ -9,11 +9,11 @@
 
 <script>
 
-	import Crew from '~/components/Crew/Crew.vue'
+	import Profiles from '~/components/Profiles/Profiles.vue'
 
 	export default {
 		components: {
-			Crew
+			Profiles
 		}
 	}
 </script>
