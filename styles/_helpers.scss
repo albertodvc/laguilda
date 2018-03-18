@@ -8,6 +8,12 @@
 
 }
 
+@mixin breakpoint($breakpoint) {
+	@media (min-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
 %cover-parent {
 	position: absolute;
 	width: 100%;

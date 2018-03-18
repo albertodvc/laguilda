@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:200i,300i,200,300,400,400i,700|Oswald:200,300,400,500,600,700');
 
+@import "helpers";
+
 $body-font: 'Old Standard TT', serif;
 $heading-font: 'Oswald', sans-serif;
 $subheading-font: 'Old Standard TT', serif;
 
 $body-text--font-size: 18px;
 
-$heading--font-size: 1.5rem;
+$heading--font-size: 1.8rem;
 $large-heading--font-size: 3rem;
 
 $subheading--font-size: 1rem;
@@ -33,6 +35,10 @@ $subheading--font-size: 1rem;
 	@extend %heading;
 	font: {
 		size: $large-heading--font-size;
+	}
+
+	@include breakpoint(680px){
+		font-size: $large-heading--font-size * 1.5;
 	}
 }
 

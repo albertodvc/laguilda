@@ -21,6 +21,7 @@
 <style lang="scss" scoped>
 
 	@import "variables";
+	@import "helpers";
 
 	.rider {
 		list-style: none;
