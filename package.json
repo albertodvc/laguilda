@@ -24,6 +24,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate && cp -a tmp/. dist/ && rm -rf tmp"
+    "generate": "nuxt generate && cp -a tmp/. dist/ && rm -rf tmp",
+    "publish": "npm run generate && cd dist && git add . && git commit -m 'alpha publishing' && git push && cd -"
   }
 }
