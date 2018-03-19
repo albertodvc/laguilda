@@ -34,14 +34,14 @@
 
 <template>
 	<nav>
-		<div role="button" class="navigator-toggle" v-on:click="navExpanded = !navExpanded">
+		<!-- <div role="button" class="navigator-toggle" v-on:click="navExpanded = !navExpanded">
 			<toggle :expanded="navExpanded"/>
 		</div>
 		<ul class="navigator" :class="{'is-open': navExpanded}">
 			<li v-for="page in pages" :key="page.link">
 				<nuxt-link :to="page.link">{{ page.label }}</nuxt-link>
 			</li>
-		</ul>
+		</ul> -->
 	</nav>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
 	<header id="container" class="front-video" v-fit-to-viewport>
-		<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+		<svg id="offlimits-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
 			<defs>
-				<mask id="mask" x="0" y="0" width="100%" height="100%" >
-				<rect x="0" y="0" width="100%" height="100%"/>
-				<text x="50%" y="50%">OFF LIMITS</text>
+				<mask id="vmask" x="0" y="0" width="100%" height="100%" >
+					<rect x="0" y="0" width="100%" height="100%"/>
+					<text x="50%" y="60%">OFF LIMITS</text>
 				</mask>
 			</defs>
 			<rect x="0" y="0" width="100%" height="100%"/>
@@ -19,9 +19,16 @@
 
 <style lang="scss" scoped>
 
+	@import "helpers";
+
 	header {
-		height: 600px;
 		position: relative;
+		@include aspect-ratio(16, 12);
+
+		@include breakpoint(640px) {
+			padding: 0;
+			width: 100%;
+		}
 	}
 
 	svg {
@@ -39,8 +46,8 @@
 	}
 	svg > rect {
 		fill: black;
-		-webkit-mask: url(#mask);
-		mask: url(#mask);
+		-webkit-mask: url(#vmask);
+		mask: url(#vmask);
 	}
 
 	.video-container {
@@ -48,7 +55,7 @@
 		top: 0;
 		bottom: 0;
 		width: 100%;
-		height: 100%; 
+		height: 100%;
 		overflow: hidden;
 		z-index: -1;
 		background: red;
@@ -58,8 +65,8 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		min-width: 100%; 
-		min-height: 100%; 
+		min-width: 100%;
+		min-height: 100%;
 		width: auto;
 		height: auto;
 		overflow: hidden;
@@ -71,7 +78,7 @@
 <script>
 
 	import data from '~/db/off-limits'
-	import ViewportHeight from '~/helpers/viewportHeight'
+	import Viewport from '~/helpers/viewport'
 
 	export default {
 		props: ['act'],
@@ -87,13 +94,35 @@
 		directives: {
 			fitToViewport: {
 				inserted: function (el) {
-					el.style.height = ViewportHeight();
-					window.addEventListener('resize', function() {
-						el.style.height = ViewportHeight();
-					})
+
+					var text = document.getElementById("offlimits-text");
+
+					const breakpoint = 640;
+
+					setHeight()
+					window.addEventListener('resize', setHeight)
+
+					function setHeight() {
+						const fontSize = 300;
+						const ratio = Viewport.width() / Viewport.height();
+						const ratioBreakPoint = 1.3
+						if (ratio > ratioBreakPoint) {
+							el.classList.remove("narrow")
+							text.style.fontSize = fontSize
+						} else {
+							el.classList.add("narrow")
+							text.style.fontSize = fontSize * ratio / ratioBreakPoint + 'px';
+						}
+						if (Viewport.width() > breakpoint) {
+							el.style.height = Viewport.height()+'px';
+						} else {
+							el.style.height = null;
+							text.style.fontSize = fontSize
+						}
+					}
 				}
 			}
 		}
 	}
-	
+
 </script>
