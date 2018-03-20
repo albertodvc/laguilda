@@ -20,6 +20,7 @@
 <style lang="scss" scoped>
 
 	@import "helpers";
+	@import "variables";
 
 	header {
 		position: relative;
@@ -32,7 +33,7 @@
 	}
 
 	svg {
-		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-family: $brand-font;
 		font-size: 300px;
 		width: 100%;
 		height: 100%;

@@ -1,6 +1,10 @@
+
+@import "fonts/impact";
 @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:200i,300i,200,300,400,400i,700|Oswald:200,300,400,500,600,700');
 
 @import "helpers";
+
+$brand-font: Impact, 'Impacto', sans-serif;
 
 $body-font: 'Old Standard TT', serif;
 $heading-font: 'Oswald', sans-serif;
