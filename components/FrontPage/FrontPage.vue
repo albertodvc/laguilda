@@ -59,7 +59,7 @@
 		height: 100%;
 		overflow: hidden;
 		z-index: -1;
-		background: red;
+		background: $main-color;
 	}
 
 	video{

@@ -16,25 +16,6 @@
 				<span class="burger-bun-bot"></span>
 			</div>
 		</div>
-
-		<!-- svg ring containter -->
-		<div class="burger-ring">
-			<svg class="svg-ring">
-				<path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
-			</svg>
-		</div>
-		<!-- the masked path that animates the fill to the ring -->
-		<svg width="0" height="0">
-			<mask id="mask">
-					<path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
-			</mask>
-		</svg>
-		<div class="path-burger">
-			<div class="animate-path">
-				<div class="path-rotation"></div>
-			</div>
-		</div>
-
 	</div>
 </template>
 
@@ -45,150 +26,32 @@
 	@import "helpers";
 
 	$color: #fff;
-	$animation: 1s;
-	$scale: 0.5;
+	$animation: .2s;
+	$scale: 0.6;
+	$width: 36px;
+	$height: 28px;
 
 	.hamburglar {
 		transform: scale($scale);
 		position: relative;
 		display: block;
-		width: 61px;
-		height: 40px;
+		width: $width;
+		height: $height;
 		-webkit-touch-callout: none;
 		user-select: none;
 	}
 
-	// transition mask
-	.path-burger {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 68px;
-		width: 68px;
-		// two masks because... browser support.
-		mask: url(#mask);
-		-webkit-mask-box-image: url(https://raygun.io/upload/mask.svg);
-	}
-
-	.animate-path {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 68px;
-		height: 68px;
-	}
-
-	// what this does is create a small square that I then rotate behind an svg mask, giving the apparence of the line animating
-	.path-rotation {
-		height: 34px;
-		width: 34px;
-		margin: 34px 34px 0 0;
-		transform: rotate(0deg);
-		transform-origin: 100% 0;
-		&:before {
-			content: '';
-			display: block;
-			width: 30px;
-			height: 34px;
-			margin: 0 4px 0 0;
-			background: $color;
-		}
-	}
-
-	// box rotation animation
-	@keyframes rotate-out {
-		0% {
-			transform: rotate(0deg);
-		}
-		40% {
-			transform: rotate(180deg);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-
-	@keyframes rotate-in {
-		0% {
-			transform: rotate(360deg);
-		}
-		40% {
-			transform: rotate(180deg);
-		}
-		100% {
-			transform: rotate(0deg);
-		}
-	}
-
-	// offset moves
-	// dasharray is the dash size
-	// need to be able to control dash space size.
-
-	.hamburglar.is-open {
-		.path {
-			animation: dash-in $animation linear normal;
-			animation-fill-mode:forwards;
-		}
-		.animate-path {
-			animation: rotate-in $animation linear normal;
-			animation-fill-mode:forwards;
-		}
-	}
-
-	.hamburglar.is-closed {
-		.path {
-			animation: dash-out $animation linear normal;
-			animation-fill-mode:forwards;
-		}
-		.animate-path {
-			animation: rotate-out $animation linear normal;
-			animation-fill-mode:forwards;
-		}
-	}
-
-	.path {
-		stroke-dasharray: 240;
-		stroke-dashoffset: 240;
-		stroke-linejoin: round;
-	}
-
-	@keyframes dash-in {
-		0% {
-			stroke-dashoffset: 240;
-		}
-		40% {
-			stroke-dashoffset: 240;
-		}
-		100% {
-			stroke-dashoffset: 0;
-		}
-	}
-
-	@keyframes dash-out {
-		0% {
-			stroke-dashoffset: 0;
-		}
-		40% {
-			stroke-dashoffset: 240;
-		}
-		100% {
-			stroke-dashoffset: 240;
-		}
-	}
 
 	// All good burgers need filling!
 
 	.burger-icon {
 		position: absolute;
-		padding: 20px 16px;
-		height: 68px;
-		width: 68px;
 	}
 
 	.burger-container {
 		position: relative;
-		height: 28px;
-		width: 36px;
+		height: $height;
+		width: $width;
 	}
 
 	.burger-bun-top,
@@ -196,8 +59,8 @@
 	.burger-filling {
 		position: absolute;
 		display: block;
-		height: 4px;
-		width: 36px;
+		height: $height / 7;
+		width: $width;
 		border-radius: 2px;
 		background: $color;
 	}
@@ -361,41 +224,22 @@
 
 	@keyframes burger-fill-in {
 		0% {
-			width: 0;
-			left: 36px;
-		}
-		40% {
-			width: 0;
-			left: 40px;
-		}
-		80% {
-			width: 36px;
-			left: -6px;
+			width: $width;
+			left: 200px;
 		}
 		100% {
-			width: 36px;
+			width: $width;
 			left: 0px;
 		}
 	}
 
 	@keyframes burger-fill-out {
 		0% {
-			width: 36px;
+			width: $width;
 			left: 0px;
 		}
-		20% {
-			width: 42px;
-			left: -6px;
-		}
-
-		40% {
-			width: 0;
-			left: 40px;
-		}
-
 		100% {
-			width: 0;
-			left: 36px;
+			left: 200px;
 		}
 	}
 </style>
