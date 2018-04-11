@@ -24,33 +24,49 @@
 
 	@import "variables";
 
+	$credit-font-color: white;
+	$credit-font-size-s: $body-text--font-size;
+	$credit-font-size-m: $heading--font-size;
+	$role-font-color: $orange;
+
 	.credits {
 		list-style: none;
 		width: 100%;
 		padding: 100px 0;
+		background: rgba(0,0,0,0.7);
+		margin: 0;
 	}
 
 	.credit {
-		color: black;
-		text-shadow: 1px 1px 1px white;
+		color: $credit-font-color;
 		@extend %heading;
+		font-size: $credit-font-size-s;
 		width: 100%;
 		margin-bottom: 15px;
+
+		@media (min-width: 652px) {
+			font-size: $credit-font-size-m;
+		}
 
 		.key,
 		.value {
 			display: inline-block;
 			vertical-align: top;
+			padding: 0 $global-spacing;
+
+			@media (min-width: 652px) {
+				padding: 0 $global-spacing * 2;
+
+			}
 		}
 
 		.key {
 			width: 50%;
 			text-align: right;
-			padding: 0 20px;
+			color: $role-font-color;
 		}
 		.value {
 			width: 50%;
-			padding: 0 20px;
 		}
 	}
 

@@ -33,12 +33,12 @@
 </script>
 
 <template>
-	<nav>
-		<div role="button" class="navigator-toggle-btn" v-on:click="navExpanded = !navExpanded">
+	<nav class="navigator">
+		<div role="button" class="menu-toggle-btn" v-on:click="navExpanded = !navExpanded">
 			<toggle :expanded="navExpanded"/>
 		</div>
-		<ul class="navigator" :class="{'is-open': navExpanded}">
-			<li v-for="page in pages" :key="page.link" v-on:click="navExpanded = false">
+		<ul class="menu" :class="{'is-open': navExpanded}">
+			<li class="item" v-for="page in pages" :key="page.link" v-on:click="navExpanded = false">
 				<nuxt-link :to="page.link">{{ page.label }}</nuxt-link>
 			</li>
 		</ul>
@@ -49,13 +49,14 @@
 
 	// @import "~compass/css3";
 	// @import "~compass/utilities";
+	@import "variables";
 	@import "helpers";
 
 	$side-menu-width: 100%;
 	$nav-bg: rgba(0, 0, 0, 0.9);
 	$menu-animation-time: .2s;
 
-	nav {
+	.navigator {
 		display: flex;
 		position: fixed;
 		right: 0;
@@ -63,92 +64,80 @@
 		z-index: 101;
 		justify-content: flex-end;
 		padding: 5px;
-	}
 
-	.navigator-toggle-btn {
-		padding: 9px 5px;
-		mix-blend-mode: exclusion;
-		border-radius: 50%;
-		background: $nav-bg;
-		position: absolute;
-		z-index: 101;
-	}
+		@media (min-width: 768px) {
+			padding: $global-spacing $global-spacing * 3;
+			width: 100%;
+			background: $nav-bg;
+		}
 
+		.menu-toggle-btn {
+			padding: 9px 5px;
+			mix-blend-mode: exclusion;
+			border-radius: 50%;
+			background: $nav-bg;
+			position: absolute;
+			z-index: 101;
 
-	.navigator {
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		right: calc(-#{$side-menu-width} - 4px);
-		background-color: $nav-bg;
-		margin: 0;
-		padding: 40% 0 ;
-		width: $side-menu-width;
-		z-index: 100;
-		transition: all $menu-animation-time ease-in-out;
-		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.7);
-		color: white;
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
+			@media (min-width: 768px) {
+				display: none;
+			}
+		}
 
-		a,
-		a:visited,
-		a:focus {
+		.menu {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: calc(-#{$side-menu-width} - 4px);
+			background: $nav-bg;
+			margin: 0;
+			padding: 40% 0 ;
+			width: $side-menu-width;
+			z-index: 100;
+			transition: all $menu-animation-time ease-in-out;
+			box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.7);
 			color: white;
-			text-decoration: none;
-		}
-
-		&.is-open {
-			right: 0;
-		}
-
-		li {
-			height: 100%;
+			list-style: none;
 			display: flex;
-			align-items: center;
 			justify-content: center;
+			flex-direction: column;
+
+			a,
+			a:visited,
+			a:focus {
+				color: white;
+				text-decoration: none;
+			}
+
+			&.is-open {
+				right: 0;
+			}
+
+			.item {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			@media (min-width: 768px) {
+				position: static;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 100%;
+				padding: 0;
+				background: none;
+				box-shadow: none;
+
+				.item {
+					color: green;
+				}
+			}
 		}
-
-
-
-		// @include breakpoint(958px) {
-		// 	background: none;
-		// 	position: static;
-		// 	margin: inherit;
-		// 	float: right;
-		// 	padding: 0 10px;
-		// 	width: auto;
-		// 	box-shadow: none;
-		// }
-		// li {
-		// 	padding: 0;
-		// 	@include breakpoint(958px) {
-		// 		display: inline-block;
-		// 	}
-		// 	a {
-		// 		text-decoration: none;
-		// 		color: white;
-		// 		display: block;
-		// 		padding: 20px 37px;
-		// 		@include breakpoint(958px) {
-		// 			padding: 32px 12px 0px 12px;
-		// 			text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-		// 			margin: 0;
-
-		// 		}
-		// 		&:focus {
-		// 			outline : none;
-		// 		}
-		// 	}
-		// 	&:last-child {
-		// 		a {
-		// 			padding-right: 0;
-		// 		}
-		// 	}
-		// }
 	}
+
+
 </style>
 
 
