@@ -55,6 +55,7 @@
 	$side-menu-width: 100%;
 	$nav-bg: rgba(0, 0, 0, 0.9);
 	$menu-animation-time: .2s;
+	$navigator-font-family: Helvetica, Arial, sanserif;
 
 	.navigator {
 		display: flex;
@@ -101,6 +102,7 @@
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
+			font-family: $navigator-font-family;
 
 			a,
 			a:visited,
