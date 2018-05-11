@@ -8,10 +8,23 @@
 
 <style lang="scss" scoped>
 
+	@import 'variables';
+	@import 'helpers';
+
+	$act__border-color: $main-color-alt;
+
 	.acts {
 		margin: 0;
 		padding: 0;
 		list-style: none;
+
+		li {
+			border-bottom: 20px solid $act__border-color;
+
+			&:first-child {
+				border-top: 20px solid $act__border-color;
+			}
+		}
 	}
 
 </style>

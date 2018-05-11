@@ -24,7 +24,7 @@
 
 	@import "variables";
 
-	$credit-font-color: white;
+	$credit-font-color: $white;
 	$credit-font-size-s: $body-text--font-size;
 	$credit-font-size-m: $heading--font-size;
 	$role-font-color: $orange;
@@ -33,7 +33,7 @@
 		list-style: none;
 		width: 100%;
 		padding: 100px 0;
-		background: rgba(0,0,0,0.7);
+		background: rgba($black, 0.7);
 		margin: 0;
 	}
 

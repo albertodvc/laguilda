@@ -17,7 +17,7 @@
 		cursor: pointer;
 
 		.icon {
-			fill: white;
+			fill: $white;
 		}
 	}
 

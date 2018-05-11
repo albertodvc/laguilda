@@ -3,9 +3,17 @@
 		<div class="info">
 			<header>
 				<h2 class="title">{{ act.title }}</h2>
-				<p class="subtitle">{{ act.subtitle }}</p>
+				<p class="subtitle" :v-if="act.subtitle">{{ act.subtitle }}</p>
 			</header>
 			<div class="description">{{ act.shortDesc }}</div>
+			<div class="video-play-button-container">
+				<play-button
+					class="video-play-button"
+					:class="{ playing: playing }"
+					v-show="ready"
+					@click.native="playVideo">
+				</play-button>
+			</div>
 		</div>
 		<div class="video-container">
 			<div class="video-placeholder"
@@ -53,12 +61,17 @@
 
 		.info {
 			padding: $act__info--base-padding $act__info--fluid-margin;
-		}
+			color: $white;
+			background: $black;
 
-		// .description {
-		// 	font-weight: 300;
-		// 	font-size: $act__description--font-size;
-		// }
+			.title {
+				margin: 13% 0;
+			}
+
+			.video-play-button {
+				display: none;
+			}
+		}
 
 		.video-container {
 			position: relative;
@@ -74,9 +87,12 @@
 				justify-content: center;
 				align-items: center;
 
-
-
-
+				&:before {
+					@include cover-parent;
+					content: '';
+					display: block;
+					background: linear-gradient(to top, rgba($black,0), rgba($black,0) 60%, rgba($black,1));
+				}
 
 				&.playing {
 					transition: opacity $act__play-transition-duration ease-in-out;
@@ -105,34 +121,65 @@
 		}
 
 		@include breakpoint(768px) {
-
-			border-bottom: 20px solid $act__border-color;
 			position: relative;
 			overflow: hidden;
 
 			.info {
 				position: absolute;
 				z-index: 2;
-				color: white;
-				width:50%;
+				background: transparent;
+				width: 54%;
+				height: 100%;
+				padding-top: 0;
+				padding-bottom: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				header,
+				.description {
+					flex-shrink: 0;
+				}
+
+				.description {
+					flex-grow: 0;
+				}
+
+				.video-play-button-container {
+					flex-grow: 11;
+					display: flex;
+					align-items: center;
+				}
+
+				.video-play-button {
+					display: block;
+				}
 			}
 
-			// .video-container {
-			// 	position: static;
-			// }
 			.video-container {
 				.video-placeholder {
-					justify-content: flex-end;
+					//justify-content: flex-end;
 
 					.video-play-button {
-						margin-right: 25%;
+						display: none;
+						//margin-right: 19%;
+						// opacity: 0;
+						// transform: scale(10);
 					}
+
+					// &:hover {
+					// 	.video-play-button {
+					// 		transition: all $act__play-transition-duration ease-in-out;
+					// 		transform: scale(1);
+					// 		opacity: 1;
+					// 	}
+					// }
 
 					&:before {
 						@include cover-parent;
 						content: '';
 						display: block;
-						background: linear-gradient(to left, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 30%, rgba(0,0,0,1));
+						background: linear-gradient(to left, rgba($black, 0) 10%, rgba($black,0) 30%, rgba($black,1) 75%, rgba($black,1));
 					}
 				}
 			}
@@ -140,18 +187,28 @@
 			&.odd {
 				.info {
 					right: 0;
+
+					.video-play-button-container {
+						justify-content: flex-end;
+					}
+
+					.title,
+					.subtitle,
+					.description {
+						text-align: right;
+					}
 				}
 
 				.video-container {
 					.video-placeholder {
-						justify-content: flex-start;
+						//justify-content: flex-start;
 
 						.video-play-button {
-							margin-left: 25%;
+							//margin-left: 19%;
 						}
 
 						&:before {
-							background: linear-gradient(to right, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 30%, rgba(0,0,0,1));
+							background: linear-gradient(to right,rgba($black, 0) 10%, rgba($black,0) 30%, rgba($black,1) 75%, rgba($black,1));
 						}
 					}
 				}

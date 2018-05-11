@@ -13,7 +13,7 @@
 	$presentation--font-size: 20px;
 
 	.presentation {
-		background: white;
+		background: $white;
 		padding: $presentation--top-padding $presentation--fluid-margin;
 
 		p {
