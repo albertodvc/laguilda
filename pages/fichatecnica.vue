@@ -10,7 +10,7 @@
 	@import "variables";
 	@import "helpers";
 
-	section {
+	.rider {
 		padding: 0 $fluid-margin;
 	}
 

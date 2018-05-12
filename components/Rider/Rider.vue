@@ -25,8 +25,9 @@
 
 	.rider {
 		list-style: none;
-		margin: 0;
-		padding: 0;
+		background: $white;
+		margin-bottom: 0;
+		padding: 20px $fluid-margin;
 	}
 
 	.item {

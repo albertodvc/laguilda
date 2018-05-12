@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<!-- <h2>El espectaculo</h2> -->
+		<h2>El espectaculo</h2>
 		<show/>
 	</section>
 </template>

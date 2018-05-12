@@ -1,8 +1,6 @@
 <template>
 	<section>
-		<header>
-			<h2>La compañia</h2>
-		</header>
+		<h2>La compañia</h2>
 		<profiles/>
 	</section>
 </template>

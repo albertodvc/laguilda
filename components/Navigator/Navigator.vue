@@ -64,7 +64,8 @@
 		top: 0;
 		z-index: 101;
 		justify-content: flex-end;
-		padding: 5px;
+		padding: 0 5px;
+		height: $navigator-height;
 
 		@media (min-width: 768px) {
 			padding: $global-spacing $global-spacing * 3;

@@ -1,16 +1,16 @@
-
-$main-color: rgb(32, 182, 232);
-$main-background--color: white;
-
+$blue: rgb(32, 182, 232);
 $orange: #ffc309;
-$main-color-alt: $orange;
-
 $black: #060604;
-$white: #f1efeb;
+$white: #f9f8f7;
 
+$dimed-white-0: mix(black, $white, 5%);
 $dimed-white-1: mix(black, $white, 10%);
 $dimed-white-2: mix(black, $white, 20%);
 $dimed-white-3: mix(black, $white, 30%);
 $dimed-white-4: mix(black, $white, 40%);
 $dimed-white-5: mix(black, $white, 50%);
 $dimed-white-6: mix(black, $white, 60%);
+
+$main-color: $blue;
+$main-color-alt: $orange;
+$main-background--color: $white;

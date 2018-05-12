@@ -8,6 +8,14 @@
 
 <style lang="scss" scoped>
 
+	@import "variables";
+
+	.profiles {
+		background: $white;
+		margin-bottom: 0;
+		padding: 20px $fluid-margin;
+	}
+
 </style>
 
 <script>

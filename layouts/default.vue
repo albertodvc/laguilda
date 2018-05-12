@@ -12,6 +12,7 @@
 	body {
 		margin: 0;
 		@extend %body-text;
+		background: $black;
 	}
 
 	h2,
@@ -28,6 +29,18 @@
 
 	* {
 		box-sizing: border-box;
+	}
+
+	nav + section {
+		padding-top: $navigator-height;
+	}
+
+	section > h2 {
+		padding-left: $fluid-margin / 2;
+		margin: 0;
+		color: $dimed-white-0;
+		background: $black;
+		font-weight: 200;
 	}
 
 </style>
