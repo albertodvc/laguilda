@@ -339,7 +339,6 @@
 				playerVars: {
 					modestbranding: 1,
 					showinfo: 0,
-					poster: 'img/10.jpg'
 				},
 				ready: false,
 				playing: false,
