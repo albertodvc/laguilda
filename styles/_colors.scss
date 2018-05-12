@@ -5,5 +5,12 @@ $main-background--color: white;
 $orange: #ffc309;
 $main-color-alt: $orange;
 
-$black: #15130e;
+$black: #060604;
 $white: #f1efeb;
+
+$dimed-white-1: mix(black, $white, 10%);
+$dimed-white-2: mix(black, $white, 20%);
+$dimed-white-3: mix(black, $white, 30%);
+$dimed-white-4: mix(black, $white, 40%);
+$dimed-white-5: mix(black, $white, 50%);
+$dimed-white-6: mix(black, $white, 60%);

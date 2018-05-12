@@ -53,7 +53,7 @@
 	@import "helpers";
 
 	$side-menu-width: 100%;
-	$nav-bg: rgba(0, 0, 0, 0.9);
+	$nav-bg: rgba($black, 0.9);
 	$menu-animation-time: .2s;
 	$navigator-font-family: Helvetica, Arial, sanserif;
 
@@ -97,7 +97,7 @@
 			z-index: 100;
 			transition: all $menu-animation-time ease-in-out;
 			box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.7);
-			color: white;
+			color: $white;
 			list-style: none;
 			display: flex;
 			justify-content: center;
@@ -107,7 +107,7 @@
 			a,
 			a:visited,
 			a:focus {
-				color: white;
+				color: $white;
 				text-decoration: none;
 			}
 

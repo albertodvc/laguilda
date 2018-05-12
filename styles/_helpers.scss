@@ -14,6 +14,12 @@
 	}
 }
 
+@mixin breakpoint-range($min, $max) {
+	@media (min-width: #{$min}) and (max-width: #{$max}) {
+		@content;
+	}
+}
+
 @mixin cover-parent {
 	position: absolute;
 	width: 100%;

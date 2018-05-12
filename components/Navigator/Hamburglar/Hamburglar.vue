@@ -24,8 +24,9 @@
 	// @import "~compass/css3";
 	// @import "~compass/utilities";
 	@import "helpers";
+	@import "variables";
 
-	$color: #fff;
+	$color: $white;
 	$animation: .2s;
 	$scale: 0.6;
 	$width: 36px;
