@@ -297,8 +297,12 @@
 	@include breakpoint(1380px) {
 		.info {
 			.title {
-				font-size: 91px !important;
+				font-size: 100px !important;
 			}
+		}
+		.video-play-button {
+			width: 150px !important;
+			height: 150px !important;
 		}
 	}
 
