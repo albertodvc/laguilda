@@ -4,7 +4,7 @@
 			<defs>
 				<mask id="vmask" x="0" y="0" width="100%" height="100%" >
 					<rect id="rotular" x="0" y="0" width="100%" height="100%"/>
-					<text id="off" x="50%" y="61%">OFF LIMITS</text>
+					<text id="off" x="50%" y="61%">OFFLIMITS</text>
 					<text id="laguilda" x="50%" y="70%">laGuilda Obscénica</text>
 				</mask>
 			</defs>
