@@ -6,8 +6,18 @@
 </template>
 
 <style lang="scss">
-    @import "normalize\.css/normalize.css";
+	@import "normalize\.css/normalize.css";
 	@import "variables";
+
+	html {
+		height: 100%;
+	}
+
+	body,
+	#__nuxt,
+	.___layout {
+		min-height: 100%;
+	}
 
 	body {
 		margin: 0;

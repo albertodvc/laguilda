@@ -18,9 +18,33 @@
 		padding:0;
 		list-style: none;
 
-		@include breakpoint(769px) {
+		@include breakpoint(889px) {
 			display: flex;
-			height: 100%;
+			flex-flow: row wrap;
+			align-content: space-between;
+			background: $black;
+			// // height: 100%;
+
+			// position: relative;
+			// //background-image: url('img/1.jpg');
+			li {
+				//flex-grow: 1;
+				width: 50%;
+				background: $main-color-alt;
+				border: 2px solid $black;
+			}
+		}
+
+		@include breakpoint(1040px) {
+			li {
+				width: 33%;
+			}
+		}
+
+		@include breakpoint(1378px) {
+			li {
+				width: 25%;
+			}
 		}
 	}
 

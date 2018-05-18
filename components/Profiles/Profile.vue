@@ -1,12 +1,10 @@
 <template>
-	<div class="profile">
-		<h3 class="name">{{ profile.name }}</h3>
-		<transition name="slide">
-			<div class="bio" v-show="expanded">
-				<p>{{ profile.bio }}</p>
-			</div>
-
-		</transition>
+	<div class="profile"
+		:class="{expanded: expanded}">
+		<h3 class="name" :class="{expanded: expanded}">{{ profile.name }}</h3>
+		<div class="bio" :class="{expanded: expanded}">
+			<p>{{ profile.bio }}</p>
+		</div>
 	</div>
 </template>
 
@@ -15,44 +13,90 @@
 	@import "helpers";
 	@import "variables";
 
+
 	.name {
 		margin: 0;
-		padding: 10px;
-		background: $main-color-alt;
+		padding: 10px $fluid-margin;
 		color: $black;
-		border-bottom: 2px solid $white;
+		background: $main-color-alt;
+		border-bottom: 4px solid $black;
+		@include breakpoint(889px) {
+			&.expanded {
+				//background: $white;
+			}
+		}
 	}
 
 	.bio {
-		max-height: 500px;
+
 		overflow: hidden;
 		margin: 0;
-		padding: 0;
+		max-height: 0;
 
 		p {
-			padding: 10px;
+			padding: 10px $fluid-margin;
+		}
+
+		&.expanded {
+			transition: max-height .4s ease-in-out;
+			max-height: 500px;
+
+			@include breakpoint(889px) {
+				// position: absolute;
+				// width: 66%;
+				// right: 0;
+				// top: 0;
+				// bottom: 0;
+			}
+		}
+
+		@include breakpoint(889px) {
+			max-height: 1500px;
+			padding: 30px $fluid-margin;
+			p {
+				margin: 0;
+				padding: 0;
+				line-height: 25px;
+			}
 		}
 	}
 
-	.slide-enter-active, .slide-leave-active {
-		transition: max-height .4s ease-in-out;
-	}
-	.slide-enter,
-	.slide-leave-to {
-		max-height: 0;
-	}
+	@include breakpoint(889px) {
 
-	@include breakpoint(769px) {
+		// .name {
+		// 	text-orientation: mixed;
+		// 	writing-m	ode: vertical-lr;
+		// }
 
-		.name {
-			text-orientation: mixed;
-			writing-mode: vertical-lr;
-		}
+		// .profile {
+		// 	&.expanded {
+		// 		position: absolute;
+		// 			width: 67%;
+		// 			right: 0;
+		// 			top: 0;
+		// 			bottom: 0;
+		// 		&:before {
+		// 			@include cover-parent;
+		// 			content: '';
+		// 			display: block;
+		// 			background: linear-gradient(to top, rgba($black,0), rgba($black,0) 60%, rgba($black,1));
+		// 			opacity: 1;
 
-		.profile {
-			display: flex;
-			height: 100%;
-		}
+		// 		}
+		// 	}
+
+		// }
+
+		// .name:first-of-type {
+		// 	writing-mode: vertical-lr;
+		// }
+		// .name:last-of-type {
+		// 	writing-mode: vertical-lr;
+		// 	text-orientation: upright;
+		// }
+
+
+
 	}
 
 </style>
