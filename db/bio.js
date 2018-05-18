@@ -9,7 +9,7 @@ export default [
 	},
 	{
 		name: 'Juan Murube',
-		bio: 'Desde que empezara su carera artística en 1999, la presencian de Juan Murube como cantaor se hace casi omnipresente. Participa con su arte en multitud de espectáculos de baile Flamenco tanto en Teatros de todo el mundo como en los principales Tablaos de Flamenco de toda España. Creador de un sello personal, da el salto como solista con su primer trabajo discográfico “Bellavista” presentado en Mayo de 2016 dentro del ciclo “Cita con las Músicas” de la Fundación Cajasol. Así pues, estamos ante una figura versátil y dúctil capaz de amoldar su talento como cantaor a las necesidades expresiva de cada momento.'
+		bio: 'Desde que empezara su carrera artística en 1999, la presencia de Juan Murube como cantaor se hace casi omnipresente. Participa con su arte en multitud de espectáculos de baile Flamenco tanto en Teatros de todo el mundo como en los principales Tablaos de Flamenco de toda España. Creador de un sello personal, da el salto como solista con su primer trabajo discográfico “Bellavista” presentado en Mayo de 2016 dentro del ciclo “Cita con las Músicas” de la Fundación Cajasol. Así pues, estamos ante una figura versátil y dúctil capaz de amoldar su talento como cantaor a las necesidades expresivas de cada momento.'
 	},
 	{
 		name: 'Fernando María',
