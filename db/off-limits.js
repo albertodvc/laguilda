@@ -5,7 +5,7 @@ export default {
 	OffLimits explora ese allende desde los lenguajes escénicos en general y desde la danza en particular, traduciendo la conciencia en ruinas a esos lenguajes, incluido por supuesto el flamenco.  Traducción que pasa necesariamente por llevarlos, a su vez, más allá de sus propios límites.
 	Allí encontramos a Eatherly, arrojado en esta encrucijada por la Técnica moderna; eterno retorno de aquel 6 de Agosto de 1945, eterno retorno del lanzamiento, de la Bomba, del terrible daño causado sin ser plenamente consciente de ello.  Ahí, en el hospital psiquiátrico para veteranos de guerra de Waco, Texas, un Eatherly desdoblado danza-dialoga consigo y con la palabra-canto de Anders. `,
 	intro: {
-		videoId: 'xpQoNCGlMgs'
+		videoId: 'JLam_4FTYAE'
 	},
 	acts: [
 		{
@@ -64,5 +64,20 @@ export default {
 			videoId: '4d63KhSxIOY',
 			shortDesc: 'Eatherly allí, en el Manicomio para veteranos de guerra, entre el horror y el tedio, la furia y los electroshocks, el lejano reconocimiento inesperado, la afinidad electiva al fin y quizás, la fuga.'
 		},
+	],
+	quotes: [
+		{
+			autor: 'Diaro de Sevilla',
+			content: `Tema sugestivo y muy actual el que plantea Laguilda Obscénica en Offlimits, ambicioso trabajo [...] Actual porque el fantasma de Hiroshima planea aún sobre el mundo, especialmente desde la aparición de Trump en el escenario político. Y sugestivo y relevante porque la pieza gira en torno a la conciencia social, ese concepto que parece haber desaparecido del diccionario cada vez que vemos las noticias.`
+		},
+		{
+			autor: 'Diario ABC',
+			content: `Una obra compleja con una propuesta no cerrada, en la que los intérpretes combinan sus estéticas [...] Pasan muchas cosas sobre la escena [...] la presencia y fuerza de las imágenes que se proyectan son  impactantes
+			Ambas estéticas dancísticas están bien combinadas, aunque sea el flamenco quien impone con más rotundidad su presencia […] Tiene momentos muy contundentes y expresivos dignos de los dos magníficos intérpretes de danza y del resto del elenco musical.`
+		},
+		{
+			autor: 'El Correo de Andalucía',
+			content: `La música entabla un diálogo entre el flamenco y el rock tan arriesgado como interesante […] Cabe destacar la pasión y el desgarro que Juan Murube imprime a su cante, así como la versatilidad y el virtuosismo de Fernando María al toque. Por su parte, María Cabeza de Vaca nos brinda algunas figuras colmadas de donosura y limpieza técnica [...] su compañero, el bailaor flamenco José María Maldonado, se luce bailando por seguiriyas.`
+		}
 	]
 }

@@ -82,7 +82,7 @@
 	}
 	svg {
 		rect {
-			fill: black;
+			fill: $black;
 			-webkit-mask: url(#vmask);
 			mask: url(#vmask);
 		}

@@ -19,7 +19,7 @@
 		p {
 			font-size: $presentation--font-size;
 			white-space: pre-wrap;
-			line-height: 27px;
+			line-height: $body-line-height;
 		}
 	}
 
