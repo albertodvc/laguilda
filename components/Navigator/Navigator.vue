@@ -7,7 +7,7 @@
 			Toggle
 		},
 		methods: {
-			mailify(name) {
+			mailify(name, $event) {
 				switch(name) {
 					case 'l': name += 'aguildaobscenica'; break;
 					case 's': name += 'econd'; break;
@@ -17,6 +17,9 @@
 				var domain = new Array('com','.','i','a','m','g').reverse().toString();
 				domain = domain.replace(/\,/g,'').replace(/(i)/g,'$1l');
 				this.mail = name + '@' + domain;
+				$event.preventDefault();
+				window.location.href = "mailto:"+this.mail;
+
 				return true;
 			}
 		},
@@ -58,7 +61,7 @@
 			</li>
 			<li class="item contact mail">
 				<a :href="'mailto:'+mail"
-					v-on:mouseover="mailify('l')">
+					v-on:click="mailify('l', $event)">
 					Enviar email
 				</a>
 			</li>
