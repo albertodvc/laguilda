@@ -6,7 +6,7 @@ export default {
 			content: '70 minutos.'
 		},
 		{
-			name: 'Personal de la compañia',
+			name: 'Personal de la compañía',
 			contents: [
 				{
 					name: 'Bailaores.',
@@ -55,15 +55,15 @@ export default {
 			name: 'Espacio escénico (ideal)',
 			contents: [
 				{
-					name: 'Embocadura:',
+					name: 'Embocadura',
 					spec: '8 metros'
 				},
 				{
-					name: 'Fondo:',
+					name: 'Fondo',
 					spec: '8 metros:'
 				},
 				{
-					name: 'Altura:',
+					name: 'Altura',
 					spec: '7 metros'
 				},
 			]
@@ -81,32 +81,32 @@ export default {
 					quantity: 1
 				},
 				{
-					name: 'Camara negra:',
+					name: 'Cámara negra',
 					spec: '5 patas y 5 bambalinas.'
 				},
 			]
 		},
 		{
-			name: 'Iluminacion',
+			name: 'Iluminación',
 			content: 'La posición de la mesa de control deberá tener visión de toda la escena.',
 			contents: [
 				{
-					name: 'Proyectores:',
+					name: 'Proyectores',
 					spec: 'P.C. 1000W. Con viseras.',
 					quantity: 25
 				},
 				{
-					name: 'Recortes:',
+					name: 'Recortes',
 					spec: 'de 1 KW. 22-40.',
 					quantity: 16
 				},
 				{
-					name: 'Lámparas:',
+					name: 'Lámparas',
 					spec: 'de 1 lumen.',
 					quantity: 20
 				},
 				{
-					name: 'Lámparas:',
+					name: 'Lámparas',
 					spec: 'de 5 lumen.',
 					quantity: 20
 				},
@@ -115,7 +115,8 @@ export default {
 					quantity: 34
 				},
 				{
-					name: 'Protocolo de señal dimmer/mesa DMX 512 o similar.'
+					name: 'Protocolo de señal dimmer/mesa',
+					spec: 'DMX 512 o similar'
 				},
 				{
 					name: 'Cableado suficiente para el montaje.'
@@ -131,14 +132,14 @@ export default {
 			content: 'Para el control de sonido y luces debe reservarse un espacio de 2x2 m. en patio de butacas.',
 			contents: [
 				{
-					name: 'P.A.:',
+					name: 'P.A.',
 					contents: [
 						{
-							name: 'Amplificación:',
+							name: 'Amplificación',
 							spec: 'Meyer, Nexo, EAW, D&B o similar. La potencia deberá ser acorde con el tamaño del espacio.'
 						},
 						{
-							name: 'Mesa:',
+							name: 'Mesa',
 							spec: '36 canales digital. Tipo YAMAHA PM5D o similar.'
 						},
 						{
@@ -152,16 +153,16 @@ export default {
 					name: 'Monitores',
 					contents: [
 						{
-							name: 'Mesa de monitores:',
+							name: 'Mesa de monitores',
 							spec: '36 canales digital. Tipo YAMAHA PM5D o similar.'
 						},
 						{
-							name: 'Monitores de escenario:',
+							name: 'Monitores de escenario',
 							spec: 'Meyer, Nexo, EAW, D&B o similar',
 							quantity: 4
 						},
 						{
-							name: 'Monitores para volar en calles:',
+							name: 'Monitores para volar en calles',
 							spec: 'tipo side-fill',
 							quantity: 4
 						}
@@ -171,32 +172,32 @@ export default {
 					name: 'Microfonía',
 					contents: [
 						{
-							name: 'Micrófonos:',
+							name: 'Micrófonos',
 							spec: 'AKGse-300ck91 o similar.',
 							quantity: 3
 						},
 						{
-							name: 'Micrófono:',
+							name: 'Micrófono',
 							spec: 'DPA d:vote 4099 o similar.',
 							quantity: 1
 						},
 						{
-							name: 'Set de micrófonos:',
+							name: 'Set de micrófonos',
 							spec: 'Akg de Batería o similar.',
 							quantity: 1
 						},
 						{
-							name: 'Micrófonos:',
+							name: 'Micrófonos',
 							spec: 'Crown pcc 166 o similar.',
 							quantity: 12
 						},
 						{
-							name: 'Micrófonos inalámbricos:',
+							name: 'Micrófonos inalámbricos',
 							spec: 'Shure o Sennheisser con cápsula DPA y con diadema o similar.',
 							quantity: 3
 						},
 						{
-							name: 'Micrófono:',
+							name: 'Micrófono',
 							spec: 'AKG CK91 o similar.',
 							quantity: 1
 						},
@@ -212,7 +213,7 @@ export default {
 					spec: '36/12 con longitud para llegar del escenario al control de sonido.'
 				},
 				{
-					name: 'EcualizadorgráficoKlark Tecnik,BSSosimilar',
+					name: 'Ecualizadorgráfico Klark Tecnik, BSS o similar',
 					spec: 'Klark Tecnik, BSS o similar',
 					quantity: 1
 				}
@@ -232,10 +233,6 @@ export default {
 					quantity: 1
 				}
 			]
-		},
-		{
-			name: 'Importante',
-			content: 'Durante el espectáculo es necesaria la presencia de al menos un técnico de luz que conozca la instalación, un técnico de sonido y un maquinista. Los camerinos deben estar acondicionados para 6 personas, debe haber agua embotellada desde la llegada de los mismos al teatro (4 horas antes de la función). La limpieza del escenario deberá realizarse una hora antes de la función y en el mismo no deberá de haber grapas, clavos, etc.'
 		}
 	]
 }

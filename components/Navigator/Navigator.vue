@@ -33,11 +33,11 @@
 					},
 					{
 						link: '/elespectaculo',
-						label: 'El espectaculo'
+						label: 'El espectáculo'
 					},
 					{
-						link: '/lacompania',
-						label: 'La compañia'
+						link: '/laguilda',
+						label: 'laGuilda'
 					},
 					{
 						link: '/fichatecnica',
@@ -62,7 +62,7 @@
 			<li class="item contact mail">
 				<a :href="'mailto:'+mail"
 					v-on:click="mailify('l', $event)">
-					Enviar email
+					Contactar
 				</a>
 			</li>
 		</ul>

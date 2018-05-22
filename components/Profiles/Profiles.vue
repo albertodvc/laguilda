@@ -52,7 +52,7 @@
 
 <script>
 
-import Profiles from '~/db/bio'
+import LaGuilda from '~/db/laguilda'
 import Profile from './Profile'
 
 export default {
@@ -61,7 +61,7 @@ export default {
 	},
 	data: function () {
 		return {
-			profiles: Profiles,
+			profiles: LaGuilda.bio,
 			activeProfile: null
 		}
 	},
