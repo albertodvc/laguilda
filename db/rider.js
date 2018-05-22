@@ -9,7 +9,7 @@ export default {
 			name: 'Personal de la compañía',
 			contents: [
 				{
-					name: 'Bailaores.',
+					name: 'Danzantes.',
 					quantity: 2
 				},
 				{

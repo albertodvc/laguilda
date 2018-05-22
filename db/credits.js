@@ -9,7 +9,7 @@ export default [
 	{key: 'Batería', value: 'Isa Rodríguez'},
 	{key: 'Programación musical', value: 'Fernando María y Alberto del Valle'},
 	{key: 'Montajes y Proyecciones', value: 'Shaula Ortega'},
-	{key: 'Vestuario', value: 'Hisabela'},
+	{key: 'Vestuario', value: 'Hisabelia'},
 	{key: 'Fotografía', value: 'Luís Ollero'},
 	{key: 'Grabación', value: 'Zancada Films'},
 	{key: 'Producción Ejecutiva', value: 'Fernando López de Haro'},
