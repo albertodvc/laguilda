@@ -4,7 +4,7 @@ export default [
 	{key: 'Dirección musical y composición', value: 'Fernando María'},
 	{key: 'Coreografías', value: 'María Cabeza de Vaca y José Maldonado'},
 	{key: 'Bailarines', value: 'José Maldonado y María Cabeza de Vaca'},
-	{key: 'Cante', value: 'Juan Murube'},
+	{key: 'Cante e interpretación', value: 'Juan Murube'},
 	{key: 'Guitarras', value: 'Fernando María'},
 	{key: 'Batería', value: 'Isa Rodríguez'},
 	{key: 'Programación musical', value: 'Fernando María y Alberto del Valle'},
