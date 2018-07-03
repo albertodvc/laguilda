@@ -67,7 +67,7 @@ export default {
 	],
 	quotes: [
 		{
-			autor: 'Diaro de Sevilla',
+			autor: 'Diario de Sevilla',
 			content: `Tema sugestivo y muy actual el que plantea Laguilda Obscénica en Offlimits, ambicioso trabajo [...] Actual porque el fantasma de Hiroshima planea aún sobre el mundo, especialmente desde la aparición de Trump en el escenario político. Y sugestivo y relevante porque la pieza gira en torno a la conciencia social, ese concepto que parece haber desaparecido del diccionario cada vez que vemos las noticias.`
 		},
 		{
