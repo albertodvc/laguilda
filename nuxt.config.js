@@ -14,8 +14,8 @@ module.exports = {
 		{ property: 'og:title', content: 'OffLimits' },
 		{ property: 'og:description', content: 'OffLimits es un primer acercamiento escénico al intercambio epistolar entre el filósofo Günther Anders y Claude Eatherly a propósito de la Bomba, es decir, a propósito de la primera bomba atómica de la Historia.' },
 		{ property: 'og:type', content: 'website' },
-		{ property: 'og:url', content: 'http://laguildaobscenica.com' },
-		{ property: 'og:image', content: 'http://laguildaobscenica.com/img/preview.jpg' },
+		{ property: 'og:url', content: 'http://laguildaobscenica.net' },
+		{ property: 'og:image', content: 'http://laguildaobscenica.net/img/preview.jpg' },
 	],
 	link: [
 	  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
