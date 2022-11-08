@@ -16,7 +16,7 @@
     "compass-mixins": "^0.12.10",
     "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
-    "nuxt": "^1.4.0",
+    "nuxt": "^2.15.8",
     "sass-loader": "^6.0.6",
     "vue-youtube": "^1.2.5"
   },
